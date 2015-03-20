@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+</head>
+<body>
+<div class="main-form" >
+    <form data-toggle="validator" role="form">
+        <div class="form-group">
+            <label for="email">ФИО</label>
+            <input type="text" class="form-control" id="name" placeholder="Ввведите имя" required>
+        </div>
+
+        <div class="form-group">
+            <label for="login">Логин</label>
+            <input type="text" class="form-control" id="login" placeholder="Введите логин" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Введите email" required>
+            <div class="help-block">Например example@domen.com</div>
+        </div>
+        <div class="form-group">
+            <label for="repeatEmail">Проверка email</label>
+            <input type="email" class="form-control" id="repeatEmail" placeholder="Пожалуйста повторите email"
+                   data-match="#email" data-match-error="email не совпадает" required>
+            <div class="help-block with-errors"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" class="form-control" id="password" placeholder="Введите пароль" required>
+        </div>
+        <div class="form-group">
+            <label for="repeatPassword">Проверка пароля</label>
+            <input type="password" class="form-control" id="repeatPassword" placeholder="Пожалуйста повторите пароль"
+                   data-match="#password" data-match-error="пароль не совпадает" required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <h4>Адресс</h4>
+
+        <div class="form-group">
+            <label for="city">Город</label>
+            <input type="text" class="form-control" id="city" required>
+            <label for="index">Индекс</label>
+            <input type="number" class="form-control" id="index">
+
+            <label for="province">Область</label>
+            <select class="form-control" id="province">
+                <option value="1">Киевская</option>
+                <option value="2">Черниговская</option>
+                <option value="3">Харковская</option>
+            </select>
+
+            <label for="street">Улица</label>
+            <input type="text" class="form-control" id="street">
+            <label for="apartment">Номер дома</label>
+            <input type="number" class="form-control" id="apartment">
+        </div>
+
+        <h4>Увлечения</h4>
+
+        <div class="form-group">
+            <div class="checkbox-inline">
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="sport" value="1"> Спорт
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="music" value="2"> Музика
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" id="bicycle" value="3"> Велопрогулки
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reference">Откуда вы о нас узнали</label>
+            <select class="form-control" id="reference">
+                <option value="1">Интернет</option>
+                <option value="2">TV</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Сохранить</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+header, section, footer{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divider{
+    border-top: solid lightgray;
+}
+
+/*div{*/
+     /*margin: 0.5em;*/
+     /*padding: 0.5em;*/
+ /*}*/
+
+.content-gray {
+    background: gray;
+    height: 8em;
+    margin: 0;
+}
+
+.content-lightgray {
+    background: lightgray;
+    height: 8em;
+}
+
+#div1 {
+    /*width: 8em;*/
+    /*height: 8em;*/
+    background: #ffff00;
+    padding: 0;
+    /*padding: 1em;*/
+}
+/*#div2 {*/
+    /*height: 8em;*/
+/*}*/
+/*#div3 {*/
+    /*height: 8em;*/
+/*}*/
