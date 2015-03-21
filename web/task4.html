@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <link rel="stylesheet" type="text/css" href="./css/main_large.css"/>
+    <link rel="stylesheet/less" type="text/css" href="./css/styles.less" />
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css"/>
+    <script src="./js/less.js" type="text/javascript"></script>
+
     <meta charset="UTF-8">
     <title></title>
 </head>
-<body>
+<body id="body">
 <header class="container-fluid">
     <div class="row">
-        <div id="div1" class="col-lg-1"><div class="content-gray"><h4>1</h4></div></div>
-        <div id="div2" class="col-lg-3"><div class="content-gray"><h4>2</h4></div></div>
-        <div id="div3" class="col-lg-8">
-            <div class="content-gray">
-                <h4>3</h4>
+        <div id="div1" class="col-lg-1">
+            <h4>1</h4>
+        </div>
+        <div id="div2" class="col-lg-3 col-sm-6">
+            <h4>2</h4>
+        </div>
+        <div id="div3" class="col-lg-8  col-sm-6">
+            <h4>3</h4>
+            <div id="contacts">
                 <h4>+38(050) 332-23-23</h4>
+                <h4><a href="mailto:info@disidn.com.ua">info@disidn.com.ua</a></h4>
+                <h4><a href="http://www.disidn.com.ua">www.disidn.com.ua</a></h4>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<section class="container-fluid">
+
+    <div class="row">
+        <div class="divider col-lg-12"></div>
+        <div id="div4" class="col-lg-2">
+            <h4>4</h4>
+            <ul>
+                <li>Изготовление сайтов "под ключ"</li>
+                <li>Как мы работаем</li>
+                <li>Интеграция с 1С</li>
+                <li>Поддержка сайтов</li>
+                <li>Создание сайтов на Битрикс</li>
+                <li>Модули Битрикс</li>
+                <li>Купить Битрикс</li>
+                <li>Дизайн сайтов</li>
+                <li>Редизайн сайтов</li>
+                <li>Интрент-магазины</li>
+                <li>Создание логотипов</li>
+            </ul>
+        </div>
+        <div class="col-lg-10">
+            <div class="row">
+                <div id="div5" class=""><h4>5</h4></div>
+            </div>
+
+            <div class="row">
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
+                <div class="div6 "><h4>6</h4></div>
             </div>
         </div>
     </div>
-</header>
-<div class="clearfix"></div>
-<section>
-    <div class="divider"></div>
-    <div id="div4" class="">
-        <h4>4</h4>
-        <ul>
-            <li>Изготовление сайтов "под ключ"</li>
-            <li>Как мы работаем</li>
-            <li>Интеграция с 1С</li>
-            <li>Поддержка сайтов</li>
-            <li>Создание сайтов на Битрикс</li>
-            <li>Модули Битрикс</li>
-            <li>Купить Битрикс</li>
-            <li>Дизайн сайтов</li>
-            <li>Редизайн сайтов</li>
-            <li>Интрент-магазины</li>
-            <li>Создание логотипов</li>
-        </ul>
+    <div class="row">
+        <div id="div7" class="col-lg-2 visible-lg"><h4>7</h4></div>
+        <div id="div8" class="col-lg-5 col-sm-6"><h4>8</h4>Студия "Вася Пупкин" разрабатает полнофункциональный
+            продукт ориентированный на целевую аудиторию и эффективно
+            решающий поставленные перед ним маркетинговые задачи.
+            Опыт работ и использование собственных технллогий...>
+        </div>
+        <div id="div9" class="col-lg-5 col-sm-6"><h4>9</h4>посиковое продвижение ведтся по комерческим запросам,
+            что позволяет многократно увеличить количество продаж с сайта...
+        </div>
+        <div class="clearfix hidden-lg"></div>
+        <div class="divider col-lg-12"></div>
     </div>
-    <div id="div5" class=""><h4>5</h4></div>
-
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-    <div class="div6"><h4>6</h4></div>
-
-    <div id="div7" class=""><h4>7</h4></div>
-
-    <div id="div8" class=""><h4>8</h4>Студия "Вася Пупкин" разрабатает полнофункциональный
-        продукт ориентированный на целевую аудиторию и эффективно
-        решающий поставленные перед ним маркетинговые задачи.
-        Опыт работ и использование собственных технллогий...>
-    </div>
-    <div id="div9" class=""><h4>9</h4></div>
-    <div class="divider"></div>
 </section>
-<div class="clearfix"></div>
+<!--<div class="clearfix"></div>-->
 <footer class="container-fluid">
-    <div class="raw">
-        <div id="div10" class="col-lg-4">
+    <div class="row">
+        <div id="div10" class="col-lg-4 col-sm-6 col-md-6">
             <h4>10</h4>
             <ul>
-                <li>Пункт 01</li>
-                <li>Пункт 02</li>
-                <li>Пункт 03</li>
-                <li>Пункт 04</li>
-                <li>Пункт 05</li>
-                <li>Пункт 06</li>
-                <li>Пункт 07</li>
-                <li>Пункт 08</li>
-                <li>Пункт 09</li>
-                <li>Пункт 10</li>
-                <li>Пункт 11</li>
-                <li>Пункт 12</li>
-                <li>Пункт 13</li>
-                <li>Пункт 14</li>
+                <li class="col1">Пункт 01</li>
+                <li class="col1">Пункт 02</li>
+                <li class="col1">Пункт 03</li>
+                <li class="col1">Пункт 04</li>
+                <li class="col1">Пункт 05</li>
+                <li class="col1">Пункт 06</li>
+                <li class="col1">Пункт 07</li>
+                <li class="col2">Пункт 08</li>
+                <li class="col2">Пункт 09</li>
+                <li class="col2">Пункт 10</li>
+                <li class="col2">Пункт 11</li>
+                <li class="col2">Пункт 12</li>
+                <li class="col2">Пункт 13</li>
+                <li class="col2">Пункт 14</li>
             </ul>
         </div>
-        <div id="div11" class="col-lg-4">
+        <div id="div11" class="col-lg-4  col-sm-6 col-md-6">
             <h4>11</h4>
             Поисковое продвижение сайтов
             <ul>
@@ -93,14 +114,10 @@
             </ul>
 
         </div>
-        <div class="col-lg-4">
-            <!--<div class="row">-->
-                <div id="div12" class=""><h4>12</h4></div>
-            <!--</div>-->
-            <!--<div class="row">-->
-                <div id="div13" class=""><h4>13</h4></div>
-            <!--</div>-->
-        </div>
+        <div class="clearfix hidden-lg"></div>
+
+        <div id="div12" class="col-lg-4"><h4>12</h4></div>
+        <div id="div13" class="col-lg-4"><h4>13</h4></div>
     </div>
 </footer>
 </body>

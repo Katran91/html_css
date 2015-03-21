@@ -1,6 +1,90 @@
-.main-form {
-    margin: 10px;
-    /*position: absolute;*/
-    height: 800px;
-    width: 600px;
+#body{
+    background: beige;
+}
+
+header, section, footer{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divider{
+    height: 0.5em;
+    border-left: solid beige 0.5em;
+    border-right: solid beige 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: lightgray;
+}
+
+#div1, #div2, #div3, #div4, #div7, #div10, #div11, #div12, #div13{
+    border: solid beige 0.5em;
+    background: gray;
+}
+
+#div5, .div6, #div8, #div9{
+    border: solid beige 0.5em;
+    background: lightgray;
+}
+
+#div1, #div2, #div3{
+    height: 8em;
+}
+
+@media screen and (max-device-width: 1199px){
+    #div1{
+        width: 8em;
+        margin: auto;
+    }
+}
+
+#div5{
+    height: 15em;
+}
+
+.div6{
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 13em;
+    height: 13em;
+}
+
+#div7{
+    margin-top: 5em;
+    height: 10em;
+}
+
+#div8{
+    height: 15em;
+}
+
+#div9{
+    height: 15em;
+}
+
+#div10, #div11 {
+    height: 15em;
+}
+
+#div12, #div13{
+    height: 7.5em;
+}
+
+#div10 ul{
+    column-count: 2;
+    -moz-column-count:2;
+    -webkit-column-count:2;
+}
+
+#div3 h4{
+    float: left;
+}
+
+#div3 #contacts {
+    float: right;
+}
+
+#div3 #contacts h4{
+    float: none;
 }
