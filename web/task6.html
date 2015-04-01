@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Task 6</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        function compare(ar1, ar2){
+            function compareElements(){};
+
+            var result = true;
+            if(ar1.length == ar2.length){
+                for(var i=0; i < ar1.length; i++){
+                    if(ar2.indexOf(ar1[i]) == -1 || ar1.indexOf(ar2[i]) == -1){
+                        result = false;
+                        break;
+                    }
+                }
+            } else {
+                result = false;
+            }
+            if(result) {
+               return true
+            } else {
+                sum1 = ar1.reduce(function(prev, cur) {return prev + cur;});
+                sum2 = ar2.reduce(function(prev, cur) {return prev + cur;});
+                if(sum1 > sum2){
+                    return {result: false, bigger:ar1.sort()}
+                } else if(sum1 < sum2){
+                    return {result: false, bigger:ar2.sort()}
+                } else {
+                    return {result: false, bigger:[]}
+                }
+            }
+        }
+
+        function compareArray(a, b) {
+            var result = compare(
+                    a.split(',').map(function (x) {
+                        return isNaN(parseInt(x)) ? 0 : parseInt(x)
+                    }),
+                    b.split(',').map(function (x) {
+                        return isNaN(parseInt(x)) ? 0 : parseInt(x)
+                    })
+            );
+
+            $('#result').text(
+                    result === true
+                            ? true
+                            : result.result + " - " + (result.bigger.length > 0 ? result.bigger : "[]")
+            );
+        }
+
+        var fibonacci = function () {
+            var result, a = 0, b = 1;
+            return function () {
+                result = a;
+                a = b;
+                b += result
+                return result;
+            };
+        }();
+
+        function getNextFibonacciNumber(){
+            $('#result_fib').text(fibonacci());
+        }
+    </script>
+</head>
+<body>
+    <label for="a">a</label>
+    <input type="text" id="a">
+    <label for="b">b</label>
+    <input type="text" id="b">
+
+    <button onclick="compareArray(a.value,b.value)">Compare</button>
+
+    <div id="result">
+
+    </div>
+
+    <div>-------------------Fibonachi------------------------------------</div>
+
+    <button onclick="getNextFibonacciNumber()">Get next fibonacci's number</button>
+
+    <div id="result_fib">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@general-font:  Arial, sans-serif;
+@blue-color: #1975FF;
+@text-color: #78787C;
+@border: 1px solid #D5D5D5;
+
+.message {
+  width: 600px;
+  margin: 6px;
+  border: @border;
+  padding: 20px;
+  background:  url("../img/sprite0.png") repeat-x 0 -39px;
+
+  h1 {
+    color: 	@blue-color;
+    font-family: @general-font;
+  }
+
+  .body {
+    margin: 10px 0 10px 0;
+    border-top: @border;
+    border-bottom: @border;
+
+    p{
+      color: 	@text-color;
+      font-family: @general-font;
+      font-size: 15px;
+    }
+  }
+
+  .left-side{
+    float: left;
+    width: 65%;
+  }
+
+  .right-side{
+    float: right;
+  }
+
+  .footer{
+    color: 	lighten(@text-color,20%);
+    font-family: @general-font;
+    font-size: 13px;
+
+    a{
+      color: lighten(@blue-color,20%);
+      font-family: @general-font;
+    }
+  }
+}
+
+p.right-side{
+  color: 	darken(@text-color,20%);
+  font-family: @general-font;
+  font-size: 18px;
+}
+
+div.clear {
+  clear: both;
+}
+
+#logo {
+  width: 35px;
+  height: 35px;
+  background: #00ff00 url("../img/sprite0.png") no-repeat 0 0 ;
+}
+
+#date-ico {
+  width: 15px;
+  height: 15px;
+  background: #00ff00 url("../img/sprite0.png") no-repeat -40px 0 ;
+}
+
+#message-ico {
+  width: 15px;
+  height: 15px;
+  background: #00ff00 url("../img/sprite0.png") no-repeat -60px 0 ;
+}

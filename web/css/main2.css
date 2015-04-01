@@ -1,0 +1,72 @@
+#message {
+    width: 600px;
+    margin: 6px;
+    border: 1px solid #D5D5D5;
+    padding: 20px;
+    background:  url("../img/sprite0.png") repeat-x 0 -39px;
+}
+
+#message-body {
+    margin: 10px 0 10px 0;
+    border-top: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.left-side{
+    float: left;
+    width: 65%;
+}
+
+.right-side{
+    float: right;
+}
+
+div.clear {
+    clear: both;
+}
+
+#logo {
+    width: 35px;
+    height: 35px;
+    background: #00ff00 url("../img/sprite0.png") no-repeat 0 0 ;
+}
+
+#date-ico {
+    width: 15px;
+    height: 15px;
+    background: #00ff00 url("../img/sprite0.png") no-repeat -40px 0 ;
+}
+
+#message-ico {
+    width: 15px;
+    height: 15px;
+    background: #00ff00 url("../img/sprite0.png") no-repeat -60px 0 ;
+}
+
+h1 {
+    color: 	#1975FF;
+    font-family: Arial, sans-serif;
+}
+
+p{
+    color: 	#78787C;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+p.right-side{
+    color: 	#78787C;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+#footer{
+    color: 	#9292A2;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+#footer a{
+    color: #5CADFF;
+    font-family: Arial, sans-serif;
+}
