@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FE-Course. Part 3 | Registration form</title>
+    <link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main7.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var inputs = $("input").not("[type=checkbox]");
+            for (var input of
+            inputs.get()
+            )
+            {
+                $(input).attr("name", input.getAttribute("id"));
+            }
+            ;
+
+            inputs.each(
+                    function (index) {
+                        $(this).attr("name", this.getAttribute("id"))
+                    }
+            );
+
+            $.ajax({
+                type: "GET",
+                url: "https://graph.facebook.com/222813434414160",
+                dataType: "jsonp",
+                success: function (profile) {
+                    inputs.each(
+                            function (index) {
+                                var value = profile[this.getAttribute("id")];
+                                $(this).attr("value", (value ? value : ""));
+                            }
+                    );
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<header class="container">
+    <h1 class="text-center">Registration form</h1>
+</header>
+<section class="container">
+    <form name="registration" class="form-horizontal" data-toggle="validator">
+        <div class="form-group required">
+            <legend class="col-sm-12">Registration info</legend>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="login" placeholder="Login" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <input type="email" class="form-control" id="email1" placeholder="Email" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="email" class="form-control" id="email2" placeholder="Confirm Email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <input type="password" class="form-control" id="password1" placeholder="Password" required>
+            </div>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" id="password2" placeholder="Confirm Password" required>
+            </div>
+        </div>
+        <fieldset>
+            <legend>Address</legend>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="zip" placeholder="ZIP Code">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-5">
+                    <select class="form-control" id="state" name="state">
+                        <option value="_none">Select State</option>
+                        <option value="value1">State 1</option>
+                        <option value="value2">State 2</option>
+                        <option value="value3">State 3</option>
+                    </select>
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="street" placeholder="Street">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="building" placeholder="Building">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Your Hobbies</legend>
+            <div class="form-group">
+                <div class="checkbox col-sm-3">
+                    <label>
+                        <input type="checkbox"> Music
+                    </label>
+                </div>
+                <div class="checkbox col-sm-3">
+                    <label>
+                        <input type="checkbox"> Cycling
+                    </label>
+                </div>
+                <div class="checkbox col-sm-3">
+                    <label>
+                        <input type="checkbox"> Front End
+                    </label>
+                </div>
+                <div class="checkbox col-sm-3">
+                    <label>
+                        <input type="checkbox"> Girls
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <legend>How did you hear about us?</legend>
+                <select class="form-control" id="about">
+                    <option value="_none">Select Please</option>
+                    <option value="value1">Google</option>
+                    <option value="value2">Friends</option>
+                    <option value="value3">Newspapers</option>
+                </select>
+            </div>
+        </div>
+        <div class="center-block">
+            <button class="btn btn-primary btn-lg col-sm-3" type="submit" id="GETSubmit">Register Profile (GET)</button>
+            <button class="btn btn-primary btn-lg col-sm-offset-3" type="submit" id="POSTSubmit">Register Profile (POST)</button>
+            <script>
+                function doRequest(method){
+                    var formData = $("form");
+
+                    $.ajax({
+                        type: method,
+                        url: "https://example.fe.com",
+                        data: formData.serialize(),
+                        dataType: "jsonp",
+                        success: function () {
+                            alert("Request " + method + " success!");
+                        },
+                        error: function(jqXHR, textStatus, ex) {
+                            alert(textStatus + "," + ex + "," + jqXHR.responseText);
+                        }
+                    });
+                    alert("Request was sent!");
+                }
+                $("#GETSubmit").click(function (event) {
+                    doRequest("GET")
+                    event.preventDefault();
+                });
+                $("#POSTSubmit").click(function (event) {
+                    doRequest("POST")
+                    event.preventDefault();
+                });
+            </script>
+        </div>
+    </form>
+</section>
+</body>
+</html>
